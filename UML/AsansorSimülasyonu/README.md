@@ -1,2 +1,2 @@
-# UniversiteYonetimSistemi
-Üniversite Yönetim Sisteminin Diagramı
+# Asansor Simülasyonu
+
