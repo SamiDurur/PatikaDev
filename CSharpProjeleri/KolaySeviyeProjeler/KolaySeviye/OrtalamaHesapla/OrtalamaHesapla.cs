@@ -18,8 +18,7 @@ namespace KolaySeviye.OrtalamaHesaplama
             dogrugiris = uint.TryParse(Console.ReadLine(), out derinlik);
             if (!dogrugiris)
             {
-                Console.WriteLine("Yanlış tuşlama yapıldı.Tekrar denemek için bir tuşa basın");
-                Console.ReadKey();
+                Console.WriteLine("Yanlış tuşlama yapıldı.Tekrar deneyin.");
                 Derinlik();
             }
             else
@@ -51,8 +50,10 @@ namespace KolaySeviye.OrtalamaHesaplama
             foreach (var i in ortalamaList)
                 toplam += i;
             int ortalama = toplam / sayiAdeti;
-            Console.WriteLine("Sayıların ortalaması :" + ortalama);
+            Console.WriteLine("Sayıların ortalaması :" + ortalama+"\n Ana menü için bir tuşa basın.");
             Console.ReadKey();
+            Console.Clear();
+            
         }
     }
 }
