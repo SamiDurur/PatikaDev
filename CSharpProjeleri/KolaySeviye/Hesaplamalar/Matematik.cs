@@ -1,31 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KolaySeviye.OrtalamaHesaplama
+namespace KolaySeviye.Hesaplamalar
 {
-    public class OrtalamaHesapla
-    {
-        private uint derinlik = 1;
-        public void Derinlik()
-        {
-            Matematik fibonacciHesaplama = new();
-            bool dogrugiris;
-            Console.Write("Sırasıyla kaç tane fibonacci sayısının ortalaması alınsın :");
-            dogrugiris = uint.TryParse(Console.ReadLine(), out derinlik);
-            if (!dogrugiris)
-            {
-                Console.WriteLine("Yanlış tuşlama yapıldı.Tekrar deneyin.");
-                Derinlik();
-            }
-            else
-                fibonacciHesaplama.Fibonacci(Convert.ToInt32(derinlik));
-
-        }
-    }
     public class Matematik
     {
         private List<int> sayiList = new List<int>();
@@ -50,10 +30,10 @@ namespace KolaySeviye.OrtalamaHesaplama
             foreach (var i in ortalamaList)
                 toplam += i;
             int ortalama = toplam / sayiAdeti;
-            Console.WriteLine("Sayıların ortalaması :" + ortalama+"\n Ana menü için bir tuşa basın.");
+            Console.WriteLine("Sayıların ortalaması :" + ortalama + "\n Ana menü için bir tuşa basın.");
             Console.ReadKey();
             Console.Clear();
-            
+
         }
     }
 }

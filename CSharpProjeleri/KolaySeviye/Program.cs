@@ -1,9 +1,11 @@
 ﻿using KolaySeviye;
 using KolaySeviye.Algoritma;
+using KolaySeviye.DaireCizme;
 using KolaySeviye.OrtalamaHesaplama;
 
 OrtalamaHesapla ortalamaHesaplama = new();
-Algoritma algoritma = new();
+UcgenCizme ucgenCizme = new();
+DaireCizme daireCizme = new();
 
 while (true)
 {
@@ -13,7 +15,7 @@ while (true)
     Console.WriteLine(" *******************************************");
     Console.WriteLine(" (1) Ortalama Hesaplama");
     Console.WriteLine(" (2) Üçgen Çizme");
-    Console.WriteLine(" (3) Varolan Numarayı Güncelleme");
+    Console.WriteLine(" (3) Daire Çizme");
     Console.WriteLine(" (4) Rehberi Listelemek");
     Console.WriteLine(" (5) Rehberde Arama Yapmak");
     Console.WriteLine(" (6) Uygulamayı Sonlandır");
@@ -27,10 +29,11 @@ while (true)
             break;
         case 2:
             Console.Clear();
-            algoritma.Boyut();
+            ucgenCizme.Boyut();
             break;
         case 3:
-            //Contacts.Update();
+            Console.Clear();
+            daireCizme.YariCap();
             break;
         case 4:
             //Contacts.List();
